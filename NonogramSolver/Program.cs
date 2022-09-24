@@ -6,7 +6,7 @@ namespace Nonogram_Solver
 	{
 		static void Main(string[] args)
 		{
-			var solver = new Solver(
+			var grid = new NonogramGrid(
 				new int[][] {
 					new int[] { 1, 1, 1, 1 },
 					new int[] { 2, 1, 1, 1, 1 },
@@ -67,9 +67,10 @@ namespace Nonogram_Solver
 				}*/
 			);
 
-			var solution = solver.Solve();
+			var solver = new NonogramSolver(grid);
+			var solved = solver.Solve();
 
-			if (solver.IsSolved())
+			if (solved)
 			{
 				Console.WriteLine("Grid solved!");
 			}
