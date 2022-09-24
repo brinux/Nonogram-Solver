@@ -376,7 +376,7 @@ namespace Nonogram_Solver
 				Console.WriteLine();
 			}
 
-			Console.ReadLine();
+			//Console.ReadLine();
 		}
 	}
 }
